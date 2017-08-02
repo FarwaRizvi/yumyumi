@@ -73,7 +73,7 @@
     </ion-row>
   </ion-grid>
 
-  <span *ngIf="BoolSpan" style="display: block; background:white; ">
+  <span style="display: block; background:white; ">
   <div class="row">
   <div class="col col-50">
     <button ion-item Large (click)="BreakfastList()">
@@ -100,106 +100,81 @@
 </div>
 </span>
 
-  <span *ngIf="BoolSpan" style="display: block; border:2px solid #000000; background: black; color: white;">
+  <span style="display: block; border:2px solid #000000; background: black; color: white;">
     <p *ngIf="Breakfast" style="padding:0px 0px 0px 0px;" text-center> <ion-icon name="ios-arrow-forward" item-right icon-small></ion-icon>  Pre-K Breakfast in the Classroom &nbsp; </p>
     <p *ngIf="Lunch" style="padding:0px 0px 0px 0px;" text-center> <ion-icon name="ios-arrow-forward" item-right icon-small></ion-icon>  3-5 Year Old Soft Foods Lunch &nbsp; </p>
   </span>
 
-  <span *ngIf="BoolSpan">
-    <button ion-item Large *ngIf="Breakfast">
-      <ion-grid >
-        <ion-row align-items-center>
-          <ion-col col-3>
-            <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM2G-meTLxeO8GK93DpHNiRW23RJ72KRfN3LH5XXpNu1aoVqL9oA">
-          </ion-col>
-          <ion-col col-9>
-            <ion-item no-lines>
-              <h2>Apple</h2>
-              <ion-avatar style="font-size:20px;">
-                <ion-grid >
-                  <ion-row align-items-center>
-                    <ion-col col-2>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              </ion-avatar>
-              <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </button>
+  <span>
+  <button ion-item Large *ngIf="Breakfast">
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-3>
+            <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdDD4t6NhTbN9PzzJI0ZFhNGbP5cAfrX-Y5aZJDsECMTaD9iirg" >
+        </ion-col>
+        <ion-col col-9>
+          <ion-item no-lines>
+          <h2>Multi Grain Cheerios</h2>
+          <ion-avatar style="font-size:20px;">
+            <ion-grid >
+              <ion-row align-items-center>
+                <ion-col col-2 >
+                  <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyA20-A9vlB5izw0AddTOzc2HNI7EwQJtl7UvhljvwN9IlSXm">
+                </ion-col>
+                <ion-col col-2>
+                  <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-avatar>
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
 
-    <button ion-item Large *ngIf="Breakfast">
-      <ion-grid >
-        <ion-row align-items-center>
-          <ion-col col-3>
-              <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdDD4t6NhTbN9PzzJI0ZFhNGbP5cAfrX-Y5aZJDsECMTaD9iirg" >
-          </ion-col>
-          <ion-col col-9>
-            <ion-item no-lines>
-            <h2>Multi Grain Cheerios</h2>
+  <button ion-item Large *ngIf="Breakfast">
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-3>
+          <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNcAzfzpBHdwPt6mvgvXzrL-jWa8NQBQ5wSoSwqf7mLWTEGSI">
+        </ion-col>
+        <ion-col col-9>
+          <ion-item no-lines>
+            <h2>Mozzarella Cheese Stick</h2>
             <ion-avatar style="font-size:20px;">
               <ion-grid >
                 <ion-row align-items-center>
-                  <ion-col col-2 >
-                    <img style="display:border; border: 2px solid black; border-radius: 50%;"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyA20-A9vlB5izw0AddTOzc2HNI7EwQJtl7UvhljvwN9IlSXm">
-                  </ion-col>
                   <ion-col col-2>
                     <img style="display:border; border: 2px solid black; border-radius: 50%;"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
                   </ion-col>
                 </ion-row>
-              </ion-grid>
-            </ion-avatar>
+              </ion-grid></ion-avatar>
             <ion-icon name="ios-arrow-forward" item-right></ion-icon>
           </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
 
-
-    <button ion-item Large *ngIf="Breakfast">
-      <ion-grid >
-        <ion-row align-items-center>
-          <ion-col col-3>
-            <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCkbK9dqmimnG21ZVolBNwIeclo2drzZZt8sHPf4OupoAtSDV">
-          </ion-col>
-          <ion-col col-9>
-            <ion-item no-lines>
-              <h2>Milk, Non-Fat White</h2>
-              <ion-avatar style="font-size:20px;">
-                <ion-grid >
-                  <ion-row align-items-center>
-                    <ion-col col-2>
-                      <img style="display:border; border: 2px solid black; border-radius: 50%;"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              </ion-avatar>
-              <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </button>
-
-
-  <button ion-item Large *ngIf="Lunch">
+  <button ion-item Large *ngIf="Breakfast">
     <ion-grid >
       <ion-row align-items-center>
         <ion-col col-3>
-          <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCkbK9dqmimnG21ZVolBNwIeclo2drzZZt8sHPf4OupoAtSDV">
+          <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-oAoqEHqYjU44xVTyeHW3hRdc0trDjc2qfdYv1A9ugKdj32O5" >
         </ion-col>
         <ion-col col-9>
           <ion-item no-lines>
-            <h2>Green Salad</h2>
+            <h2>Orange Juice</h2>
             <ion-avatar style="font-size:20px;">
               <ion-grid >
                 <ion-row align-items-center>
+                  <ion-col col-2 >
+                  </ion-col>
                   <ion-col col-2>
                     </ion-col>
                 </ion-row>
@@ -212,7 +187,33 @@
     </ion-grid>
   </button>
 
-  <button ion-item Large *ngIf="Lunch">
+  <button ion-item Large *ngIf="Breakfast">
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-3>
+          <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCkbK9dqmimnG21ZVolBNwIeclo2drzZZt8sHPf4OupoAtSDV">
+        </ion-col>
+        <ion-col col-9>
+          <ion-item no-lines>
+            <h2>Milk, 1% White</h2>
+            <ion-avatar style="font-size:20px;">
+              <ion-grid >
+                <ion-row align-items-center>
+                  <ion-col col-2>
+                    <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-avatar>
+            <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
+
+  <button ion-item Large *ngIf="Breakfast">
     <ion-grid >
       <ion-row align-items-center>
         <ion-col col-3>
@@ -237,5 +238,63 @@
       </ion-row>
     </ion-grid>
   </button>
+
+  <button ion-item Large *ngIf="Lunch">
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-3>
+          <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-oAoqEHqYjU44xVTyeHW3hRdc0trDjc2qfdYv1A9ugKdj32O5" >
+        </ion-col>
+        <ion-col col-9>
+          <ion-item no-lines>
+            <h2>Orange Juice</h2>
+            <ion-avatar style="font-size:20px;">
+              <ion-grid >
+                <ion-row align-items-center>
+                  <ion-col col-2>
+                    <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdDD4t6NhTbN9PzzJI0ZFhNGbP5cAfrX-Y5aZJDsECMTaD9iirg">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-avatar>
+            <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
+
+  <button ion-item Large *ngIf="Lunch">
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-3>
+            <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdDD4t6NhTbN9PzzJI0ZFhNGbP5cAfrX-Y5aZJDsECMTaD9iirg" >
+        </ion-col>
+        <ion-col col-9>
+          <ion-item no-lines>
+          <h2>Multi Grain Cheerios</h2>
+          <ion-avatar style="font-size:20px;">
+            <ion-grid >
+              <ion-row align-items-center>
+                <ion-col col-2 >
+                  <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyA20-A9vlB5izw0AddTOzc2HNI7EwQJtl7UvhljvwN9IlSXm">
+                </ion-col>
+                <ion-col col-2>
+                  <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-avatar>
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
+
+
 </span>
 </ion-content>

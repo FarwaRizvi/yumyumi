@@ -1,18 +1,213 @@
-<!--
-  Generated template for the TuesdayPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>tuesday</ion-title>
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-1>
+          <button ion-button menuToggle>
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-11>
+          <ion-title>San Diego Unified School District</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
 
-<ion-content padding>
+  <span style="padding:100px 0px 100px 0px;">
+  <ion-item style="background:#000000; color:white;">
+  <ion-datetime disabled="true" style="text-align: right;" displayFormat="MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  </span>
+  <ion-grid style="background:#000000; color:white;">
 
+    <ion-row align-items-center>
+      <ion-col col-1>
+        <button Large (click)="minus()" style="background:#000000; color:white;" icon-only item-center>
+          <ion-icon name="ios-arrow-back" item-right></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-2 >
+        <button (click)="MPage()" style="background:#000000; color:white;" small icon-only text-center>
+          <h6 text-center> Mon</h6>
+          <h6 text-center *ngIf="!Boola"> {{mon.getDate()}}</h6>
+          <h6 text-center class="circle" *ngIf="Boola"> {{mon.getDate()}}</h6>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <button (click)="TUPage()" style="background:#000000; color:white;" small icon-only text-center>
+          <h6 text-center> Tues</h6>
+          <h6 text-center *ngIf="!Boolb"> {{tues.getDate()}} </h6>
+          <h6 text-center class="circle" *ngIf="Boolb"> {{tues.getDate()}} </h6>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <button (click)="WPage()" style="background:#000000; color:white;" small icon-only text-center>
+          <h6 text-center> Wed</h6>
+          <h6 text-center *ngIf="!Boolc"> {{wed.getDate()}}</h6>
+          <h6 text-center class="circle" *ngIf="Boolc"> {{wed.getDate()}}</h6>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <button (click)="THPage()" style="background:#000000; color:white;" small icon-only text-center>
+          <h6 text-center> Thurs</h6>
+          <h6 text-center *ngIf="!Boold"> {{thurs.getDate()}}</h6>
+          <h6 text-center class="circle" *ngIf="Boold"> {{thurs.getDate()}}</h6>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <button (click)="FPage()" style="background:#000000; color:white;" small icon-only text-center>
+          <h6 text-center> Fri</h6>
+          <h6 text-center *ngIf="!Boole"> {{fri.getDate()}}</h6>
+          <h6 text-center class="circle" *ngIf="Boole"> {{fri.getDate()}}</h6>
+        </button>
+      </ion-col>
+      <ion-col col-1>
+        <button Large (click)="plus()" style="background:#000000; color:white;" icon-only text-center>
+          <ion-icon name="ios-arrow-forward" item-left></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <span *ngIf="BoolSpan" style="display: block; background:white; ">
+  <div class="row">
+  <div class="col col-50">
+    <button ion-item Large (click)="BreakfastList()">
+      <ion-avatar item-center large style="padding:0px 40px 0px 60px;">
+        <img *ngIf="Breakfast"  src="assets/4.jpg" alt="your image">
+        <img *ngIf="Lunch" src="assets/5.jpg" alt="your image">
+      </ion-avatar>
+      <h2 *ngIf="Breakfast" text-center style="color:green;">Breakfast</h2>
+      <h2 *ngIf="Lunch" text-center>Breakfast</h2>
+    </button>
+  </div>
+  <div class="col col-50">
+    <div class="verticalLine">
+    <button ion-item Large (click)="LunchList()">
+      <ion-avatar item-center large style="padding:0px 40px 0px 60px;">
+        <img *ngIf="Breakfast" text-center src="assets/1.jpg" alt="your image">
+        <img *ngIf="Lunch" text-center src="assets/2img.jpg" alt="your image">
+      </ion-avatar>
+      <h2 *ngIf="Breakfast" text-center>Lunch</h2>
+      <h2 *ngIf="Lunch" text-center style="color:green;">Lunch</h2>
+    </button>
+  </div>
+</div>
+</div>
+</span>
+
+  <span *ngIf="BoolSpan" style="display: block; border:2px solid #000000; background: black; color: white;">
+    <p *ngIf="Breakfast" style="padding:0px 0px 0px 0px;" text-center> <ion-icon name="ios-arrow-forward" item-right icon-small></ion-icon>  Pre-K Breakfast in the Classroom &nbsp; </p>
+    <p *ngIf="Lunch" style="padding:0px 0px 0px 0px;" text-center> <ion-icon name="ios-arrow-forward" item-right icon-small></ion-icon>  3-5 Year Old Soft Foods Lunch &nbsp; </p>
+  </span>
+
+  <span *ngIf="BoolSpan">
+    <button ion-item Large *ngIf="Breakfast">
+      <ion-grid >
+        <ion-row align-items-center>
+          <ion-col col-3>
+            <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNcAzfzpBHdwPt6mvgvXzrL-jWa8NQBQ5wSoSwqf7mLWTEGSI">
+          </ion-col>
+          <ion-col col-9>
+            <ion-item no-lines>
+              <h2>Mozzarella Cheese Stick</h2>
+              <ion-avatar style="font-size:20px;">
+                <ion-grid >
+                  <ion-row align-items-center>
+                    <ion-col col-2>
+                      <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
+                    </ion-col>
+                  </ion-row>
+                </ion-grid></ion-avatar>
+              <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </button>
+
+    <button ion-item Large *ngIf="Breakfast">
+      <ion-grid >
+        <ion-row align-items-center>
+          <ion-col col-3>
+            <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCkbK9dqmimnG21ZVolBNwIeclo2drzZZt8sHPf4OupoAtSDV">
+          </ion-col>
+          <ion-col col-9>
+            <ion-item no-lines>
+              <h2>Milk, Non-Fat White</h2>
+              <ion-avatar style="font-size:20px;">
+                <ion-grid >
+                  <ion-row align-items-center>
+                    <ion-col col-2>
+                      <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-avatar>
+              <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </button>
+
+
+  <button ion-item Large *ngIf="Lunch">
+    <ion-grid >
+      <ion-row align-items-center>
+        <ion-col col-3>
+          <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCkbK9dqmimnG21ZVolBNwIeclo2drzZZt8sHPf4OupoAtSDV">
+        </ion-col>
+        <ion-col col-9>
+          <ion-item no-lines>
+            <h2>Milk, Non-Fat White</h2>
+            <ion-avatar style="font-size:20px;">
+              <ion-grid >
+                <ion-row align-items-center>
+                  <ion-col col-2>
+                    <img style="display:border; border: 2px solid black; border-radius: 50%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8XHXO2EZt6oFgRS3NX61WtJG6RCufRm7HyRUbnbe_u4qH5kzBLA">
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-avatar>
+            <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </button>
+
+
+<button ion-item Large *ngIf="Lunch">
+  <ion-grid >
+    <ion-row align-items-center>
+      <ion-col col-3>
+        <img class="full-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCkbK9dqmimnG21ZVolBNwIeclo2drzZZt8sHPf4OupoAtSDV">
+      </ion-col>
+      <ion-col col-9>
+        <ion-item no-lines>
+          <h2>Green Salad</h2>
+          <ion-avatar style="font-size:20px;">
+            <ion-grid >
+              <ion-row align-items-center>
+                <ion-col col-2>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-avatar>
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</button>
+
+</span>
 </ion-content>
